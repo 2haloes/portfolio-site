@@ -1,32 +1,47 @@
 :root {
-    --main-color: black;
+    --main-color: #222;
     --text-color: white;
-    --switch-background: black;
     --switch-border: white;
-    --switch-button-position: -7.75rem;
+    --pop-background: #37474f;
+    --switch-button-position: -7.9rem;
 }
 
 #colorMode:checked ~ * {
     --main-color: white;
-    --text-color: black;
-    --switch-background: white;
-    --switch-border: black;
-    --switch-button-position: -6.25rem;
+    --text-color: #222;
+    --switch-border: #222;
+    --pop-background: #dee4e7;
+    --switch-button-position: -1.9rem;
 }
 
-body{
+body {
     margin:0;
-  }
+    font-family: Helvetica, Arial, sans-serif;
+}
 
-svg {
+.outerContainerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerContent {
     width: 75%;
     height: 75%;
+}
+
+.containerTextContent {
+    color: var(--text-color);
+    padding: 3%;
+    transition: color 2000ms;
+}
+
+.yearsAnimation {
     fill: var(--text-color);
     transition: fill 2000ms;
 }
 
 .topContainer {
-    height: 100vh;
     width: 100vw;
     display: flex;
 }
@@ -35,15 +50,14 @@ svg {
     height: 100vh;
     width: 50vw;
     border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .topRightContainer {
     height: 100vh;
     width: 50vw;
     border: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -59,36 +73,46 @@ svg {
 #colourSwitchLabel {
     padding-left: 3.875rem;
     position: relative;
+    margin-left: auto;
 }
 
 #colourSwitchLabel::before {
     position: absolute;
-    content: "";
+    content: " Light     Dark";
     height: 1.875rem;
-    width: 3.375rem;
-    background-color: var(--switch-background);
+    width: 10.875rem;
+    background-color: var(--text-color);
     border: 1px solid var(--switch-border);
+    color: var(--main-color);
     border-radius: 0.9375rem;
     cursor: pointer;
-    transition: background-color 200ms;
+    transition: background-color 2000ms, color 2000ms, border 2000ms;
     transform: translate(-3.375rem, 0);
+    white-space: pre;
+    font-size: 1.7rem;
 }
 
-/* #colorMode:checked + #colourSwitchLabel:before {
-    background-color: green;
-    border-color: green;
-  } */
-
-label:after {
+#colourSwitchLabel:after {
     position: absolute;
     content: "";
-    height: 1.9rem;
-    width: 1.9rem;
+    height: 2rem;
+    width: 4.9rem;
     border-radius: 0.9375rem;
-    background-color: blue;
-    /* left: 0.3125rem;
-    top: 50%; */
-    transform: translate(var(--switch-button-position), 0.045rem);
+    background-color: var(--main-color);
+    transform: translate(var(--switch-button-position), 0);
     cursor: pointer;
-    transition: transform 200ms;
+    transition: transform 1000ms, background-color 2000ms;
+}
+
+.lightSwitchContainer {
+    /* padding-left: 40vw; */
+    display: inline-block;
+    margin-left: auto;
+    transform: translate(-4.375rem, 1rem);
+}
+
+.portfolioIntro {
+    margin-top: 20vh;
+    margin-left: 5vw;
+    width: 40vw
 }
