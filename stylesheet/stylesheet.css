@@ -27,7 +27,7 @@ body {
 
 .containerContent {
     width: 75%;
-    height: 75%;
+    /* height: 75%; */
 }
 
 .containerTextContent {
@@ -115,4 +115,8 @@ body {
     margin-top: 20vh;
     margin-left: 5vw;
     width: 40vw
+}
+
+.screenshot {
+    border-radius: 10px;
 }
