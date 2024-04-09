@@ -121,14 +121,16 @@ body {
     border-radius: 10px;
 }
 
-.serverSvg * {
+.serverSvgForeground {
     stroke: var(--text-color);
     fill: var(--text-color);
+    transition: fill 2000ms, stroke 2000ms;
 }
 
-.serverSvg .serverSvgBackground {
+.serverSvgBackground {
     stroke: var(--main-color);
     fill: var(--main-color);
+    transition: fill 2000ms, stroke 2000ms;
 }
 
 @media (prefers-color-scheme: light) {
