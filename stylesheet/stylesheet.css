@@ -120,3 +120,59 @@ body {
 .screenshot {
     border-radius: 10px;
 }
+
+.serverSvg * {
+    stroke: var(--text-color);
+    fill: var(--text-color);
+}
+
+.serverSvg .serverSvgBackground {
+    stroke: var(--main-color);
+    fill: var(--main-color);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-color: white;
+        --text-color: #222;
+        --switch-border: #222;
+        --pop-background: #dee4e7;
+        --switch-button-position: -1.9rem;
+    }
+    
+    #colorMode:checked ~ * {
+        --main-color: #222;
+        --text-color: white;
+        --switch-border: white;
+        --pop-background: #37474f;
+        --switch-button-position: -7.9rem;
+    }
+  }
+
+  @media screen and (max-width:1280px) {
+    .topLeftContainer {
+        height: auto;
+        width: 100vw;
+    }
+
+    .topRightContainer {
+        height: auto;
+        width: 100vw;
+    }
+
+    .topContainer {
+        flex-wrap: wrap-reverse;
+    }
+
+    .portfolioIntro {
+        margin-top: auto;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: auto;
+    }    
+
+    .yearsAnimation {
+        height: auto;
+    }
+    
+  }

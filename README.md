@@ -9,5 +9,6 @@ The animation showing my years of exprience was created using Inkscape to create
 
 Items in the assets/not_free directory are used for informitive purposes and were not created by myself.
 The Access Group logo belongs to The Access Group, the vector used was found [here](https://seeklogo.com/vector-logo/317020/the-access-group) and was converted into an SVG file using Inkscape
+The screenshot of the Plan app is owned by Milestoned LLC and was taken from the app's [Windows store page](https://apps.microsoft.com/detail/9nblggh4vhbw?hl=en-gb&gl=GB)
 
 To reduce file sizes [SVGOMG](https://svgomg.net/) is used on the SVG files (orginals have been kept in the assets folder) and [tinify](https://tinypng.com/) is used on the other image files
