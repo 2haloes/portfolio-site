@@ -4,6 +4,8 @@
     --switch-border: white;
     --pop-background: #37474f;
     --switch-button-position: -7.9rem;
+    --link-text: #9ECFFF;
+    --link-text-visited: #D1A3FF;
 }
 
 #colorMode:checked ~ * {
@@ -12,11 +14,23 @@
     --switch-border: #222;
     --pop-background: #dee4e7;
     --switch-button-position: -1.9rem;
+    --link-text: #0066CC;
+    --link-text-visited: #400080;
 }
 
 body {
     margin:0;
     font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: var(--link-text);
+    transition: color 2000ms;
+}
+
+a:visited {
+    color: var(--link-text-visited);
+    transition: color 2000ms;
 }
 
 .outerContainerContent {
@@ -139,6 +153,8 @@ body {
         --switch-border: #222;
         --pop-background: #dee4e7;
         --switch-button-position: -1.9rem;
+        --link-text: #0066CC;
+        --link-text-visited: #400080;
     }
     
     #colorMode:checked ~ * {
@@ -147,6 +163,8 @@ body {
         --switch-border: white;
         --pop-background: #37474f;
         --switch-button-position: -7.9rem;
+        --link-text: #9ECFFF;
+        --link-text-visited: #D1A3FF;
     }
   }
 
